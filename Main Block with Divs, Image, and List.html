@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://127.0.0.1:5500/Tyler%20DOCTYPE%20html.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Block with Divs, Image, and List</title>
+    <style>
+        .banner {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 48px;
+            background-color: lightgray;
+        }
+        #div1 {
+            display: flex;
+        }
+        #div1_left {
+            width: 60%;
+        }
+        #div1_left img {
+            width: 100%;
+        }
+        #div1_right {
+            width: 40%;
+        }
+        #div1_right .headline {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #div1_right a {
+            font-weight: bold;
+        }
+        #div2 {
+            display: flex;
+        }
+        .name-card {
+            flex: 1;
+            text-align: center;
+            /*
+            margin: 10px;
+            padding: 10px;
+            */
+            border: 1px solid #ccc;
+        }
+
+        #div2 .name-card {
+        width: 25%;
+    }
+        .name-card img {
+            /*
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            */
+        }
+
+        #div2 .name-card img {
+        width: auto;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="banner">Welcome to my webpage</div>
+    <main>
+        <div id="div1">
+            <div id="div1_left">
+                <img src="./Main Block with Divs, Image, and List_files/image1.jpg" alt="Image 1">
+            </div>
+            <div id="div1_right">
+                <div class="headline">AI is working</div>
+                <p>Summer 2024, WDD Using AI at Albany State University</p>
+                <a href="https://www.asurams.edu/">Visit ASU Rams</a>
+                <p>A webpage is a stack of &lt;div&gt;'s. Each &lt;div&gt; is a block that is designed separately. There are four styles for each &lt;div&gt;.</p>
+                <ul>
+                    <li>Brief room style: like whitehouse webpage</li>
+                    <li>Lowe's style that lists categories of products</li>
+                    <li>Artist style that shows a very meaningful picture with some description</li>
+                    <li>Documentation style such as a university catalog</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div2">
+            <div class="name-card">
+                <img src="./Main Block with Divs, Image, and List_files/div2_p1.png" alt="Screw Drivers">
+                <p>Milter Saws</p>
+                <p>On Sale 70% off</p>
+                <p>Price range: $200-$500</p>
+            </div>
+            <div class="name-card">
+                <img src="./Main Block with Divs, Image, and List_files/div2_p2.png" alt="Person 2">
+                <p><strong>Screw Driver</strong></p>
+                <p><strong>On Sale 50% off</strong></p>
+                <p><strong>Price range: $100-$300</strong></p>
+            </div>
+            <div class="name-card">
+                <img src="./Main Block with Divs, Image, and List_files/div2_p3.png" alt="Person 3">
+                <p>Lawn Mower</p>
+                <p>On Sale 30% off</p>
+                <p>Price range:$200-$400</p>
+            </div>
+            <div class="name-card">
+                <img src="./Main Block with Divs, Image, and List_files/div2_p4.png" alt="Person 4">
+                <p>Grills</p>
+                <p>On Sale 30% off</p>
+                <p>Price range:$200-$400</p>
+            </div>
+        </div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+        <div id="div6"></div>
+        <div id="div7"></div>
+        <div id="div8"></div>
+        <div id="div9"></div>
+        <div id="div10"></div>
+        <div id="div11"></div>
+        <div id="div12"></div>
+        <div id="div13"></div>
+        <div id="div14"></div>
+        <div id="div15"></div>
+        <div id="div16"></div>
+        <div id="div17"></div>
+        <div id="div18"></div>
+        <div id="div19"></div>
+        <div id="div20"></div>
+    </main>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

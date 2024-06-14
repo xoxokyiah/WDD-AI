@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Block with Divs, Image, and List</title>
+    <style>
+        .banner {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 48px;
+            background-color: lightgray;
+        }
+        #div1 {
+            display: flex;
+        }
+        #div1_left {
+            width: 60%;
+        }
+        #div1_left img {
+            width: 100%;
+        }
+        #div1_right {
+            width: 40%;
+        }
+        #div1_right .headline {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #div1_right a {
+            font-weight: bold;
+        }
+
+
+        #div2 {
+            display: flex;
+        }
+        .name-card {
+            flex: 1;
+            text-align: center;
+            width: 25%;
+            /*
+            margin: 10px;
+            padding: 10px;
+            */
+            border: 1px solid #ccc;
+        }
+
+        .name-card img {
+        
+            width: 100%;
+            height: 50%;
+            border-radius: 5px;
+        
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="banner">Welcome to my webpage</div>
+    <main>
+        <div id="div1">
+            <div id="div1_left">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div id="div1_right">
+                <div class="headline">AI is working</div>
+                <p>Summer 2024, WDD Using AI at Albany State University</p>
+                <a href="https://www.asurams.edu">Visit ASU Rams</a>
+                <p>A webpage is a stack of &lt;div&gt;'s. Each &lt;div&gt; is a block that is designed separately. There are four styles for each &lt;div&gt;.</p>
+                <ul>
+                    <li>Brief room style: like whitehouse webpage</li>
+                    <li>Lowe's style that lists categories of products</li>
+                    <li>Artist style that shows a very meaningful picture with some description</li>
+                    <li>Documentation style such as a university catalog</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div2">
+
+           
+                <div class="name-card">
+                    <a href="screwDriver.html" target="_blank">
+                        <img src="div4_p1b.png" alt="Screw Drivers">
+                        <p>Lexus LC 500 Black & Purple</p>
+                        <p>On Sale off</p>
+                        <p>Price range:$200-$500</p>
+                    </a>
+
+                </div>
+            
+
+
+
+            <div class="name-card">
+                <img src="div2_p2.png" alt="Person 2">
+                <p><strong>Screw Driver</strong></p>
+                <p><strong>On Sale 50% off</strong></p>
+                <p><strong>Price range: $100-$300</strong></p>
+            </div>
+            <div class="name-card">
+                <img src="div2_p3.png" alt="Person 3">
+                <p>Lawn Mower</p>
+                <p>On Sale 30% off</p>
+                <p>Price range:$200-$600</p>
+            </div>
+            <div class="name-card">
+                <img src="div2_p4.png" alt="Person 4">
+                <p>Grills</p>
+                <p>On Sale 30% off</p>
+                <p>Price range:$200-$400</p>
+            </div>
+        </div>
+
+
+        <div id="div3" style="display: flex;" >
+            <div id="div3_left-column" style="width: 25%;" class="left-column">
+                <h2>Table of contents</h2>
+                <ul>
+                    <li>Milter Saws
+                    <li>Screw Driver
+                    <li>Lawn Mower
+                    <li>Grills
+<!--
+                        <li>Home Depot
+                    <li>Supplies
+                    <li>Sources
+-->
+                    </ul>
+            </div>
+            <div id="div3_right-column" style="width: 75%;" class="right-column">
+                <h2>AAAAA</h2>
+                <p>AAAAA AAAAA AAAAA AAAAA</p>
+            </div>
+        </div>
+        
+        
+         
+
+            <div id="div4" style="display: flex; background-image: url('div4.jpg'); background-size: 100% 75%; background-repeat: no-repeat; position: relative;">
+                <div class="div4--left-column" style="width: 25%;">
+                    <!-- Left column content -->
+                </div>
+                <div id="div4">
+                    <img src="div4.jpg" style="width: 100%; height: 75%;">
+                    <p style="position: absolute; top: 10px; right: 10px; color: rgb(207, 15, 15); font-size: 24px;">My Dream Vacation</p>
+                </div>
+
+        <div id="div4"></div>
+
+
+    </main>
+
+
+    <script>
+        let div3Content = [];
+        div3Content[0]="<h2>Mitre Saw</h2>"
+                + "is a type of stationary saw designed to make precision"
+                + "cuts at multiple angles. The blade is pulled downwards"
+                +" onto the material, unlike with a circular saw where it "
+                +"feeds through the material. Mitre saws are best for cutting "
+                + "boards thanks to their large cutting capacities.";
+
+
+        div3Content[1]="<h2>Screw Drivers</h2>"
+            +"is a type of hand tool used for the insertion and removal of screws"
+            +"it is available in a multitude of variations. To correspond to the correct screw drive.";
+      
+         div3Content[2]="<h2>Lawn Mower</h2>"
+         +"Is designed to cut the grass"
+         +"It's mainly used to cut sports grounds and gardens";
+        
+        div3Content[3]="<h2>Grills</h2>"
+        +"Putting your food on the grill will help make the food crispy" 
+        + "It is also very easy to use when you know how to cook";
+
+       // div3Content[4]="E";
+       // div3Content[5]="f";
+       // div3Content[6]="G";
+
+        function replaceContent(letter) {
+          var rightColumn = document.querySelector('#div3 .right-column');
+          rightColumn.innerHTML = letter;
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          var listItems = document.querySelectorAll('#div3 .left-column li');
+          listItems.forEach(function(item, i) {
+            item.addEventListener('click', function() {
+              replaceContent(div3Content[i]);
+            });
+          });
+        });
+      </script>
+</body>
+</html>
